@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BlueLib.ResourcePacks:jar">
+    <output-path>$PROJECT_DIR$/builds</output-path>
+    <root id="archive" name="BlueLib.ResourcePacks.jar">
+      <element id="module-output" name="BlueLib.ResourcePacks" />
+      <element id="dir-copy" path="$PROJECT_DIR$/BlueLib.ResourcePacks/src/main/resources" />
+    </root>
+  </artifact>
+</component>

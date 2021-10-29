@@ -1,0 +1,23 @@
+name: BlueLib
+main: ru.kronos.bluelib.Main
+version: 1.0
+api-version: 1.13
+website: https://vk.com/id55511198
+depend: []
+loadbefore: []
+softdepend: [MultiWorld, HolographicDisplays, LuckPerms, PlaceholderAPI, DiscordSRV]
+permissions: {}
+commands:
+  bluelib:
+    description: Основная команда плагина.
+    permission: bluelib.admin
+    permission-message: У вас нет нужных прав <permission>.
+    usage: Usage /<command>
+    aliases: [bl, blib]
+  bluelib-request:
+    description: Команда для ответа на запросы через кнопку в чате.
+    permission: bluelib.request
+    permission-message: У вас нет нужных прав <permission>.
+    aliases: [request]
+  MenuTesting:
+  

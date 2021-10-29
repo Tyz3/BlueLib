@@ -1,0 +1,8 @@
+beforeButton: "yellow_stained_glass_pane:0:1:&a&l<<<"
+nextButton: "yellow_stained_glass_pane:0:1:&a&l>>>"
+
+items:
+- 'cookie:0:1:cookie_1'
+
+deco:
+- 'cookie:0:1:cookie_1'

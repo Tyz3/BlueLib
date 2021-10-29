@@ -1,0 +1,27 @@
+# Амулеты
+EmptyTalisman:
+# SnakeHorn:
+#   talismanName: 'Змеиный рог'
+#   display: 'Яд'
+#   displayFormat: 'line2'
+#   color: '&2'
+#   chance: 0.6
+Cannibalism:
+  display: 'Каннибализм'
+  override: '&eТалисман {number}&7: &8[{c}{display}&7 {value}&8]'
+  color: '&2'
+  hpPerLevel: 5
+# FirstBlood:
+#   talismanName: 'Скрытая хватка'
+#   display: 'Первая кровь'
+#   displayFormat: 'line2'
+#   color: '&2'
+#   cooldown: 90
+#   chance: 0.15
+#   roundPlaces: 0
+# Weightless:
+#   talismanName: 'Невесомость'
+#   display: 'Невесомость'
+#   color: '&2'
+#   absorbtionPerLevel: 5
+  

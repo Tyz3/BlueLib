@@ -1,0 +1,14 @@
+name: YNC.TurboTokens
+main: ru.Oxy.TurboTokens.TT
+description: ''
+version: 1.0
+api-version: 1.13
+website: truerpg.su
+author: [Kronos]
+depend: [YoungNiggaCore]
+commands:
+  token:
+    description: Main command of the plugin.
+    permission: token.admin
+    usage: /token
+    aliases: [tk]

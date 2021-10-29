@@ -1,0 +1,70 @@
+updateRegularAtTicks: 100
+
+# Effects: BLINDNESS, CONFUSION, DAMAGE_RESISTANCE, FAST_DIGGING,
+# FIRE_RESISTANCE, HARM, HEAL, HEALTH_BOOST, HUNGER, INCREASE_DAMAGE,
+# INVISIBILITY, JUMP, NIGHT_VISION, REGENERATION, SATURATION, SLOW,
+# SLOW_DIGGING, SPEED, WATER_BREATHING, WEAKNESS, WITHER.
+phases:
+  "START":
+    # Подстановки: {playerName} {locX} {locY} {locZ} {locPitch} {locYaw} {worldName}
+    join:
+      message: "Hello, {playerName}"
+      title: ["Title", "Subtitle"]
+
+      exec-cmds:
+        - 'give COMMAND_BLOCK {playerName}'
+        - 'tp {locX} {locY} {locZ}'
+      # Формат записи зелья. Первый 3 параметра обязательные!
+      # POTION_TYPE:duration:aplifier:isAmbient:hasParticles:hasIcon
+      # !!!!!!!!!!! !!!!!!!! !!!!!!!! ????????? ???????????? ???????
+      effects:
+        - 'INCREASE_DAMAGE:100:0'
+      gamemode: SPECTATOR
+
+
+    regular:
+      effects:
+
+        - 'NIGHT_VISION:100:0'
+      god-rule:
+        # Блокировать любой урон (по умолчанию = false)
+        all: true
+        # Если all: false, то блокируется урон только из списка ниже (по умолчанию = [])
+        # CONTACT, ENTITY_ATTACK, ENTITY_SWEEP_ATTACK, PROJECTILE, SUFFOCATION, FALL, FIRE, FIRE_TICK,
+        # MELTING, LAVA, DROWNING, BLOCK_EXPLOSION, ENTITY_EXPLOSION, VOID, LIGHTNING, SUICIDE, STARVATION,
+        # POISON, MAGIC, WITHER, FALLING_BLOCK, THORNS, DRAGON_BREATH, CUSTOM, FLY_INTO_WALL, HOT_FLOOR,
+        # CRAMMING, DRYOUT, FREEZE
+        for:
+          - 'FALL'
+          - 'CONTACT'
+
+      command-rule:
+        as-blacklist: false
+        list:
+          - 'tp'
+
+      item-rule:
+        as-blacklist: false
+        list:
+          - 'chicken:0'
+
+      block-rule:
+        as-blacklist: false
+        groups:
+          - actions: [PLACE, BREAK, INTERACT]
+            blocks: []
+
+    exit:
+      exec-cmds:
+        - 'command1'
+        - 'command2'
+      effects:
+        - 'HEALTH_BOOST:1000:2'
+      gamemode: SURVIVAL
+
+  "MAIN":
+    join:
+      gamemode: SPECTATOR
+
+    exit:
+      gamemode: SURVIVAL

@@ -1,0 +1,53 @@
+name: BlueLib.ChatAssistant
+main: ru.kronos.chatassistant.Main
+version: 1.0
+api-version: 1.13
+website: https://vk.com/id55511198
+softdepend: [PlaceholderAPI, DiscordSRV]
+depend: [BlueLib]
+commands:
+  chatassistant:
+    description: Базовая команда плагина.
+    permission: chatassistant.admin
+    permission-message: У вас нет нужных прав <permission>.
+    usage: /<command> <сообщение>
+    aliases: [ca]
+  do:
+    description: "Описать действие предмета, увечий и других итогов после выполненного вами действия. Написанное видят игроки в радиусе 15 блоков. Пример: /me выстрелил из арбалета по мишени и попал. /<command> стрела пробила мишень."
+    permission: chatassistant.do.use
+    permission-message: У вас нет нужных прав <permission>.
+    usage: /<command> <сообщение>
+  me:
+    description: "Описать действие в настоящем времени. Написанное видят игроки в радиусе 15 блоков. Пример: /<command> достал пару монет и положил на стойку."
+    permission: chatassistant.me.use
+    permission-message: У вас нет нужных прав <permission>.
+    usage: /<command> <сообщение>
+  nonrp:
+    description: "Используется, чтобы вести диалоги вне RP, конечно же не стоит злоупотреблять этим в RP ситуациях, ибо вы засоряете чат и доставляете другим неудобство. Радиус 10 блоков."
+    permission: chatassistant.nonrp.use
+    permission-message: У вас нет нужных прав <permission>.
+    usage: /<command> <сообщение>
+    aliases: [n]
+  scream:
+    description: "Позволяет отыгрывать крик персонажа. Радиус достигает 30 блоков."
+    permission: chatassistant.scream.use
+    permission-message: У вас нет нужных прав <permission>.
+    usage: /<command> <сообщение>
+    aliases: [s]
+  whisper:
+    description: "Используя эту команду, игрок общается шёпотом. Радиус 5 блоков."
+    permission: chatassistant.whisper.use
+    permission-message: У вас нет нужных прав <permission>.
+    usage: /<command> <сообщение>
+    aliases: [w]
+  broadcast:
+    description: "Позволяет отправить сообщение в чат, которое увидят абсолютно все. Стоит учитывать, что команда используется только для оповещения об ивентах или каких-то других глобальных действиях связанных с игровым процессом. Пример: /<command> По материку ходят очень странный слух, где-то в долине живёт дракон невиданных размеров, местные лорды в срочном порядке набирают новобранцев в армию, чтобы сразить чудовище и освободить долину от напасти. ((Координаты))"
+    permission: chatassistant.broadcast.use
+    permission-message: У вас нет нужных прав <permission>.
+    usage: /<command> <сообщение>
+    aliases: [bc]
+  todo:
+    description: "Позволяет писать отыгровку, совмещая с действиями. @ - разделительный знак между отыгровкой и действием. Пример: /todo Ох, как же болит моя голова. @взявшись руками за голову."
+    permission: chatassistant.todo.use
+    permission-message: У вас нет нужных прав <permission>.
+    usage: /<command> <отыгровка> @<действие>

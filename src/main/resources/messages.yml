@@ -1,0 +1,30 @@
+GlobalSettings:
+  DebugPrefix:
+    MINIMUM: '&8[MINIMUM]&r'
+    CRITICAL: '&5[CRITICAL]&r'
+    ERROR: '&4[ERROR]&r'
+    WARNING: '&c[WARNING]&r'
+    INFO: '&a[INFO]&r'
+    DEBUG: '&b[DEBUG]&r'
+
+OnlineEngine:
+  kick: 'Вы были кикнуты.'
+  kickall: 'Вы были кикнуты.'
+RequestEngine:
+  defaultButtonTip: 'Нажми, для активации запроса!'
+  cancelRequest: '&cУ вас нет ожидающих запросов или время ответа истекло.'
+  jsonRequest: 'json: ["",{"text":"Вам пришёл запрос на действие. "},{"text":"\uEF00","clickEvent":{"action":"run_command","value":"{command}"},"hoverEvent":{"action":"show_text","value":"{description}"}}]'
+CooldownEngine:
+  hasCooldown: '&7Вам нужно подождать ещё &8{S}&7 сек.'
+WarmUpEngine:
+  notification: '&7Выполение действия через &8{S}&7...'
+  cancelled:
+    move: '&cДействие отменено из-за движения.'
+    hit: '&cДействие отменено из-за удара.'
+StorageEngine:
+  loadingData: '&cДействие невозможно, так как ваши данные ещё не загрузились. Попробуйте позже.'
+API3rdPartyEngine:
+  DiscordSRV:
+    linkedAccount: ':wheelchair: **{player}** привязал аккаунт к дискорду [ UUID: {uuid}, Discord: {discordTag} ({discordUserId}) ]'
+    unlinkedAccountPM: '(Unlinked) Ваш аккаунт {player} больше не привязан к проекту {projectName}!'
+    unlinkedAccount: ':clown: **{player}** отвязал аккаунт от дискорда [ UUID: {uuid}, Discord: {discordTag} ({discordUserId}) ]'

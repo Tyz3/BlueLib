@@ -1,0 +1,11 @@
+name: BlueLib.CombatLog
+main: ru.kronos.combatlog.Main
+version: 1.0
+api-version: 1.13
+website: https://vk.com/id55511198
+depend: [BlueLib]
+loadbefore: [BlueLib]
+commands:
+  combat:
+    usage: Используйте /<command>, чтобы посмотреть статус боя
+    aliases: [ct]

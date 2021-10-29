@@ -1,0 +1,22 @@
+BurstPower:
+  display: 'Первая кровь'
+  damage: 6
+  duration: 5
+  ambient: true
+  # Планируется сделать tellraw описание на эффект.
+  description:
+  - ''
+BerserkBoostDamage:
+  display: 'Адреналин'
+  # Уменьшается на 1 за каждое доп. хп, начиная с 2.
+  maxDamageBoost: 30
+  hungerStep: 1
+  # Эффект голода срабатывает каждые 30 тиков (1.5 сек)
+  applySpeed: 3
+  speedBoost: 0.2 # +100%
+  # В секундах
+  duration: 20
+  # Выдать эффект поверх существующего
+  ambient: true
+  
+  

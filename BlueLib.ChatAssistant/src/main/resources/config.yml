@@ -1,0 +1,211 @@
+DiscordSRV:
+  # Включить поддержку для плагина DiscordSRV
+  Enabled: true
+  messageFormat: "[{channelName}] {displayName}: {message}"
+
+PlaceHolderAPI:
+  # Включить поддержку для плагина PlaceHolderAPI
+  Enabled: true
+
+# Установите true, если хотите включить замену ссылок в чате
+TranslateLink: true
+# Определяет регулярное выражение для заменя URI в чате на короткое слово
+# Примеры из интернета:
+# (https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9]\.[^\s]{2,})
+# ((http|https|ftp|ftps)\:\/\/)?[a-zA-Z0-9\-]+\.[a-zA-Z]{2,3}(\/\S*)?
+# ((http|https|ftp|ftps)\:\/\/)?[a-zA-Z0-9\-]+\.[a-zA-Z]{2,3}(\/\S*)?([^\s]+)
+LinkRegex: ([\w]+\:\/\/)?([\w]+\.)+[\w]{2,}(\/[\w\-?&=#\.]+)*
+# Формат короткого слова для замены
+LinkFormat:
+  text: '<LINK>'
+  color: 'aqua'
+  style: 'underline'
+  tip: '{link}'
+  сlickEvent: 'open_url'
+  clickContent: '{link}'
+
+SpyPrefix:
+  text: '[SPY] '
+  color: 'red'
+  style: 'bold'
+
+# Форматы префиксов каналов чата
+# Используйте &r в сочетании с & и color: #hex, чтобы покрасить hex-ом только
+# выбранную часть префикса
+ChatChannels:
+  # Глобальный чат, начинается с !
+  Shout:
+    id: '806447087318597662'
+    Prefix:
+      text: '&7[&6G&7] '
+    # Дистанция отправки сообщения в чате, если указано 0,
+    # то сообщение доставляется всем
+    range: 0
+  Local:
+    range: 10
+  # Торговый чат, начинается с $
+  Trade:
+    id: '806447173226463264'
+    Prefix:
+      text: '&7[&rТорговля&7] '
+      color: '#FFDD00'
+    messageColor: '#FFDD00'
+    range: 0
+  # Чат помощи, начинается с ?
+  Help:
+    id: '806447253463367690'
+    Prefix:
+      text: '&7[&rПомощь&7] '
+      color: '#B83700'
+    Message:
+      scheme: 'CH_PRFX DISP SEP MESG'
+      message: '#B83700'
+    range: 0
+  Me:
+    Message:
+      scheme: 'ME-DISP SPACE MESG'
+      message: dark_purple
+    range: 15
+  Do:
+    Message:
+      scheme: 'MESG SPACE DO-DISP'
+      message: dark_purple
+    range: 15
+  Whisper:
+    Message:
+      scheme: 'W-DISP W-SEP MESG'
+      message: '#686868'
+    range: 5
+  Scream:
+    Message:
+      scheme: 'S-DISP S-SEP MESG'
+      message: 'white'
+    range: 30
+  Nonrp:
+    Message:
+      scheme: 'NONRP'
+    range: 10
+  Broadcast:
+    Prefix:
+      text: '[Объявление] '
+      color: gold
+      style: bold
+    Message:
+      scheme: 'CH_PRFX BC-DISP SEP MESG'
+      message: red
+    range: 0
+
+# Элементы для составления формата сообщения получателя
+# tip - строка или список
+# Свойство color принимает значения:
+# :: black, dark_blue, dark_green, dark_aqua, dark_red,
+# :: dark_purple, gold, gray, dark_gray, blue, green,
+# :: aqua, red, light_purple, yellow, white
+# Свойство style принимает значения:
+# :: bold, italic, underline, strikethrough, obfuscated
+# Свойство сlickEvent принимает значения:
+# :: OPEN_URL, OPEN_FILE, RUN_COMMAND, SUGGEST_COMMAND, CHANGE_PAGE, COPY_TO_CLIPBOARD
+#
+# Обязательные подстановки, которым нельзя менять название:
+# :: PRFX, SUFF, DISP, MESG, CH_PRFX, DSRV_LNK, DSRV_ULNK
+# Если у DISP указаны декораторы, то цвет из GroupSetting ставиться не будет
+ChatElements:
+  'PRFX':
+    text: '{prefix} '
+  'SUFF':
+    text: ' {suffix}'
+  'DISP':
+    text: '{displayName}'
+    сlickEvent: 'suggest_command'
+    clickContent: '/msg {displayName} '
+  'MESG':
+    text: '{msg}'
+  'CH_PRFX':
+    # Форматирование этой подстановки управлется в ChatChannelPrefix
+    text: ''
+  'DSRV_LNK':
+    text: '\uEF01'
+    tip: 'Скопировать (ЛКМ): &b{ds-tag}'
+    сlickEvent: 'COPY_TO_CLIPBOARD'
+    clickContent: '{ds-tag}'
+  'DSRV_ULNK':
+    text: '\uEF02'
+
+  ME-DISP:
+    text: '{displayName}'
+    color: dark_purple
+  DO-DISP:
+    text: '(({displayName}))'
+    color: dark_gray
+  W-DISP:
+    text: '{displayName}'
+    color: '#686868'
+  W-SEP:
+    text: ' шепчет: '
+    color: dark_gray
+  S-DISP:
+    text: '{displayName}'
+    color: '#F4CA16'
+  S-SEP:
+    text: ' кричит: '
+    color: yellow
+  NONRP:
+    text: '(( {displayName}: {msg} ))'
+    color: dark_gray
+  BC-DISP:
+    text: '{displayName}'
+    color: gold
+
+
+  'MUT':
+    text: '[MT]'
+    color: 'green'
+    style:
+      - 'bold'
+      - 'underline'
+    tip: 'Давай его замутим? Ну же, ну?'
+    сlickEvent: 'suggest_command'
+    clickContent: '/mute {displayName}'
+  'SPACE':
+    text: ' '
+  'SEP':
+    text: ': '
+    color: 'yellow'
+
+# Схемы используются только в Shout, Local,
+# Используется если игрок не подходит ни к одной из групп в списке GroupSetting
+GeneralScheme:
+  scheme: 'CH_PRFX SPACE PRFX DISP SUFF SPACE SEP MESG'
+  displayName: 'white'
+  message: 'white'
+
+# Чем выше в списке, тем больше приоритет
+# Если у игрока есть права двух групп, применится тот, что выше в списке
+GroupPriority:
+  - 'admin'
+  - 'moder'
+  - 'vip'
+  - 'default'
+
+# chatassistant.chatgroup.[id] permnission node to use
+# Permission example: chatassistant.chatgroup.default
+# schema: схема, по которой игрок видит сообщения как получатель
+# message: цвет сообщения отправителя, можно использовать хекс (#55ff55)
+# displayName: цвет ника отправителя, можно использовать хекс (#55ff55)
+GroupSchemes:
+  'default':
+    scheme: 'CH_PRFX PRFX DISP SUFF SEP MESG'
+    displayName: 'yellow'
+    message: 'white'
+  'vip':
+    scheme: 'CH_PRFX PRFX DISP SUFF SEP MESG'
+    displayName: 'white'
+    message: 'white'
+  'moder':
+    scheme: 'CH_PRFX DSRV_LNK DSRV_ULNK SPACE PRFX DISP SUFF SEP MESG'
+    displayName: 'yellow'
+    message: '#FF4100'
+  'admin':
+    scheme: 'CH_PRFX DSRV_LNK DSRV_ULNK SPACE PRFX DISP SUFF TM SEP MESG'
+    displayName: 'red'
+    message: '#FF7936'

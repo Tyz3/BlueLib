@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BlueLib.GamePhase:jar">
+    <output-path>$PROJECT_DIR$/builds</output-path>
+    <root id="archive" name="BlueLib.GamePhase.jar">
+      <element id="module-output" name="BlueLib.GamePhase" />
+      <element id="dir-copy" path="$PROJECT_DIR$/BlueLib.GamePhase/src/main/resources" />
+    </root>
+  </artifact>
+</component>

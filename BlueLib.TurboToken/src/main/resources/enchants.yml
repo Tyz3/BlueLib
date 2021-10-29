@@ -1,0 +1,192 @@
+# Чары
+#EnchantRed:
+#  display: 'Удар в спину'
+#  displayFormat: 'line1'
+#  color: '&7'
+#  chance: 10.0
+Spikes:
+  display: 'Шипы'
+  color: '&7'
+  reflectionPerLevel: 0.02
+Regeneration:
+  display: 'Регенерация'
+  override: '{c}{display}&7: {sign}{value}'
+  color: '&d'
+  healthPerLevel: 0.1
+Madness:
+  display: 'Удар по области'
+  color: '&7'
+  radius: 2.5
+  sharePerLevel: 0.02
+Rage:
+  display: 'Ярость'
+  color: '&7'
+  damagePerLevel: 1.0
+  healthTrigger: 7.0
+# InstantDamage:
+#   display: 'Моментальный урон'
+#   displayFormat: 'line2'
+#   color: '&5'
+#   chancePerLevel: 0.005
+#   cooldown: 10
+#   stackAmplifierByLevel: 30
+PoisonTheory:
+  display: 'Заговор яда'
+  displayFormat: 'line2'
+  color: '&2'
+  chancePerLevel: 0.005
+  durationPerStep: 40
+  levelsByStep: 10
+  startDuration: 20
+  amplifier: 1
+  cooldown: 10
+WitherTheory:
+  display: 'Заговор иссушения'
+  displayFormat: 'line2'
+  color: '&8'
+  chancePerLevel: 0.005
+  durationPerStep: 40
+  levelsByStep: 10
+  startDuration: 20
+  amplifier: 1
+  cooldown: 10
+BlindnessTheory:
+  display: 'Заговор слепоты'
+  displayFormat: 'line2'
+  color: '&8'
+  chancePerLevel: 0.005
+  durationPerStep: 40
+  levelsByStep: 10
+  startDuration: 20
+  amplifier: 1
+  cooldown: 10
+Dodge:
+  display: 'Парирование'
+  displayFormat: 'line2'
+  color: '&b'
+  chancePerLevel: 0.001
+# Block:
+#   display: 'Блок'
+#   displayFormat: 'line2'
+#   color: '&3'
+#   chancePerLevel: 0.005
+# CriticalProtection:
+#   display: 'Критическая защита'
+#   displayFormat: 'line1'
+#   color: '&7'
+#   absorbtionPerLevel: 1
+CritChance:
+  display: 'Шанс крита'
+  displayFormat: 'line2'
+  color: '&5'
+  chancePerLevel: 0.001
+CritPower:
+  display: 'Сила крита'
+  override: '{c}{display}&7: {sign}{value}'
+  color: '&4'
+  powerPerLevel: 0.1
+SlownessTheory:
+  display: 'Замедление'
+  displayFormat: 'line2'
+  color: '&9'
+  chancePerLevel: 0.005
+  durationPerStep: 40
+  levelsByStep: 10
+  startDuration: 20
+  amplifier: 1
+  cooldown: 10
+MovementSpeed:
+  # Default speed = 0.2 (100%)
+  display: 'Скорость'
+  displayFormat: 'line2'
+  color: '&9'
+  bonusSpeedPerLevel: 0.0002 # = +0.1%
+SlownessSpeed:
+  # Default speed = 0.2 (100%)
+  display: 'Скорость'
+  displayFormat: 'line2'
+  color: '&c'
+  bonusSpeedPerLevel: 0.0002 # = -0.1%
+
+
+  
+# Ближний бой
+# Sharpness:
+#   display: 'Острота'
+#   displayFormat: 'line1'
+#   color: '&7'
+#   damagePerLevel: 1.25
+# Smite:
+#   display: 'Небесная кара'
+#   displayFormat: 'line1'
+#   color: '&7'
+#   damagePerLevel: 2.5
+# FireTheory:
+#   display: 'Заговор огня'
+#   displayFormat: 'line1'
+#   color: '&7'
+#   chancePerLevel: 0.005
+#   durationPerLevel: 60
+Kickback:
+  display: 'Отдача'
+  displayFormat: 'line1'
+  color: '&7'
+  multiplyPerLevel: 2
+  yBoostPerLevel: 1
+  
+# Защита брони
+# Protection:
+#   display: 'Защита'
+#   displayFormat: 'line1'
+#   color: '&7'
+#   pvpRangeDefencePerLevel: 0.006
+#   pvpMeleeDefencePerLevel: 0.014
+#   pveDefencePerLevel: 1
+# ProtectionProjectiles:
+#   display: 'Защита от снарядов'
+#   displayFormat: 'line1'
+#   color: '&7'
+#   pvpDefencePerLevel: 0.018
+#   pveDefencePerLevel: 1
+
+# Дальний бой
+# Power:
+#   display: 'Сила'
+#   displayFormat: 'line1'
+#   color: '&7'
+#   pvpBoostPerLevel: 2.0
+#   pveBoostPerLevel: 3.0
+# FireArrow:
+#   display: 'Горящая стрела'
+#   displayFormat: 'line1'
+#   color: '&7'
+#   chancePerLevel: 0.05
+#   durationPerLevel: 60
+# Punch:
+#   display: 'Откидывание'
+#   displayFormat: 'line1'
+#   color: '&7'
+#   multiplyPerLevel: 2
+#   yBoostPerLevel: 1
+  
+  
+# LossCurse:
+#   display: 'Проклятие утраты'
+#   displayFormat: 'line1'
+#   color: '&c'
+
+  
+# Особые свойства
+Sharp:
+  display: 'Шанс рунического усиления'
+  color: '&e'
+  roundPlaces: 2
+  startChance: 1.0
+# Undroppable:
+#   override: '{c}{display}'
+#   display: 'Невыпадаемый'
+#   color: '&6'
+AutoRepair:
+  display: 'Авто-починка'
+  color: '&7'
+  repairAmountPerLevel: 500

@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BlueLib.ChatAssistant:jar">
+    <output-path>$PROJECT_DIR$/builds</output-path>
+    <root id="archive" name="BlueLib.ChatAssistant.jar">
+      <element id="module-output" name="BlueLib.ChatAssistant" />
+      <element id="dir-copy" path="$PROJECT_DIR$/BlueLib.ChatAssistant/src/main/resources" />
+    </root>
+  </artifact>
+</component>

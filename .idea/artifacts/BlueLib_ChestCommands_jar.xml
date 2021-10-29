@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BlueLib.ChestCommands:jar">
+    <output-path>$PROJECT_DIR$/builds</output-path>
+    <root id="archive" name="BlueLib.ChestCommands.jar">
+      <element id="module-output" name="BlueLib.ChestCommands" />
+      <element id="dir-copy" path="$PROJECT_DIR$/BlueLib.ChestCommands/src/main/resources" />
+    </root>
+  </artifact>
+</component>

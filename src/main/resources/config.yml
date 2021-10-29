@@ -1,0 +1,96 @@
+GlobalSettings:
+  # Уровни логгирования:
+  # MINIMUM, CRITICAL, ERROR, WARNING, INFO, DEBUG.
+  # -------<<--------<<-----<<-------<<----<<-----<<
+  # Каждый следующий уровень включает в себя предыдущий.
+  logLevel: 'DEBUG'
+  projectName: 'Hios Role Play'
+
+API3rdPartyEngine:
+  DiscordSRV: true
+  PlaceholderAPI: true
+  PermissionEx: true
+  LuckyPerms: true
+  
+OnlineEngine:
+  enabled: true
+CooldownEngine:
+  enabled: true
+  clearTaskDelaySeconds: 120
+RequestEngine:
+  enabled: true
+  clearTaskDelaySeconds: 120
+WarmUpEngine:
+  enabled: true
+  countingPattern: '60,30,10,5-1'
+EventEngine:
+  enabled: true
+#
+EnchantEngine:
+  enabled: true
+# Не реализован
+PotionEngine:
+  enabled: true
+# Улучшенная обработка периодического урона по игроку
+# Ревизия: 1.16.5
+#
+# Одновременное нанесение урона от: отравления, моментального урона,
+# ударов кактуса, падения, ударов существ, огня, лавы и т. д.
+# Событие использует приоритет MONITOR
+#
+# enableTimings: включить отслеживание времени между получаемым уроном
+# stackDamageCause: урон, который будет сгруппирован и применён на игрока
+# noStackDamageCause: причины урона, с которых урон не стакается, т. е. не суммируется
+# за время dealDamageFrequencyTicks
+# Весь накопленный урон отправляется игроку под видом CUSTOM урона
+#
+# Источники (DamageCause): ENTITY_ATTACK, ENTITY_SWEEP_ATTACK, PROJECTILE, FALL,
+# FIRE_TICK, MELTING, DROWNING, BLOCK_EXPLOSION, ENTITY_EXPLOSION, FLY_INTO_WALL,
+# VOID, LIGHTNING, SUICIDE, STARVATION, POISON, MAGIC, WITHER, FALLING_BLOCK, CUSTOM,
+# THORNS, DRAGON_BREATH, CRAMMING, DRYOUT, CONTACT, LAVA, SUFFOCATION, FIRE, HOT_FLOOR
+# Периодический урон: STARVATION, POISON, WITHER, FIRE_TICK, DROWNING
+# Постоянный контакт: CONTACT, LAVA, SUFFOCATION, FIRE, HOT_FLOOR, FLY_INTO_WALL
+DamageControlEngine:
+  enabled: true
+  HealthOverDamage:
+    enable: true
+    hitCooldownMillis: 1500
+    hitCounter: 4
+
+  enableTimings: false
+  dealDamageFrequencyTicks: 10
+  stackDamageCause:
+  - STARVATION
+  - POISON
+  - WITHER
+  - FIRE_TICK
+  noStackDamageCause:
+  - CONTACT
+  - LAVA
+  - SUFFOCATION
+  - FIRE
+  - HOT_FLOOR
+  - FLY_INTO_WALL
+  - DROWNING
+CommandEngine:
+  enabled: true
+ChestMenuEngine:
+  enabled: true
+ScoreboardEngine:
+  enabled: true
+StorageEngine:
+  enabled: true
+  # Время в минутах, после которого данные игрока удалятся из кэша
+  timeBeforeFlush: 60
+  # Каждые 300 секунд происходит сохранение данных игрока на диск
+  saveEverySeconds: 300
+
+#
+PluginEngine:
+  enabled: true
+  Licenses:
+    BlueLib:
+      ChatAssistant: "170fb5da1ac5df76caf61e353082f39d0d39d4600adeeacde7934fc72a664fbaeb4aee92944e4a8d12c974dc367d17d726dfe1b5642cf292f9cba0d63f27e06f61801297b03c24af79525ee778387764300333d94bf44c72129e99d11d789addc50124441ca9114a03104b06f719c6f3b4fb0a46c9a5f585ef8b6272581dc3a846b61141c9f5aa6090280671c4892e64afb4c4c47cb448f56f65b6be4a9b890bbbe5cb913383cd5fd568113621912fc0142ff8818e0385fb27f8eeec1e787664b3c51dcd067045df254b9f39d3c87ffa02790e16f922cee97c861b986a2d44230b1e31415eee16e9243c159ee19623ff39c2ab997ada15f26887084cdbd68fbd"
+      GamePhase: "1b712370b3289b7a29dad00a39fa8dad9688638b3ba070c680c2993acf76c179ed1061920f262a7163acd71fa5d9ef75f2548621df64118dae320bcf99b99e710c3f63d7bd05a5ad0e79e6bfc3f104c1868ec162f0efa4a2e780fb1e340f4b89bfec54eb7e6dbace74f24ea81e8363e22d1c67b2757ec41bdf8224a15cda8a684006fe2744282df567335f07d75bc9af6e7718a563c59e8df771eee64c8c54b3c677d26d7ff09ae474cecc0a7cdc929469910f6eb6aa123bcfb5ef80f0c61c1abb23c3e33e90cadfacc29414e3409b744316529b68249ab0a529ae32b459c4993c04f9e9afc32bac485c12edbb246b07e00593b6d7fd285e8dada0594ca4b08f"
+      ChestCommands: "1e4d75179c67af35a79cbef962853031f23c3d74006ed7ff45676c35b5b83b8b993b1ad2c26df59232ac5fea0e0e3e9de5b698110a39f05de489687da2447a10df71132f6e199b13eb6510e8a43e8eeb413374940ebdcb0c8329e4d0a63ff4deb8f8b448e0ecb32b686868a771e806b2261d19a6b938caabae89fabd2ba5ac19cf2eb88bbc75a47f410aba17f7c1be0ff740e0ebab3ff055c3e8c9ab6b7c8e5bcb738fcc75f9e850d18c4b141f9987f5a510ceea0cb25e78bfbc4cb1bd919f1df604a3a575bfc96307a472854a27142d1cf7d6aaa969260a69e50024dce380ab4517038ecfd96dc324932ea6fbac58ebb2b8ad66c375a6e0a307bc224e5f5a9b"
+      ResourcePacks: "1eb4ab35c8df3075f78f4691224ad51a359ce020526d97656f03556c306119784e3588a940e797e6703f20ef24fe124f9d6e6e29f44159e45275fd574417fb6de0c217168b12580640bc644c7d1c1244c855ccb56a44d9568b43b6b51aaa999f5ec350afd4b17a18ba5eb57c3f912f4fd1f0238fcf7399ed75945ecdc76972df85e4adb29b99dc6680a1dde74c5f2ed6679d69b7d41faab8659c92740143fde6aa2d4802e908adde46eabbd4a7bc6dc5e8a9ccefa05756eb39b7cd9077a81974722facbcc13aa241ead2149c37b56d9f37a73670ab474daa7519f3ce47ae6a1d12e32f2b12a0ae169b003c65813341ae19d11e7dc80b9fc768a1c2b6644c2dcf"

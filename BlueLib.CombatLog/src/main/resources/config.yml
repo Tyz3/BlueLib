@@ -1,0 +1,35 @@
+Options:
+  # Длительность боя
+  duration: 15
+  # Права на возможность выхода из игры во время боя (игрок не умирает)
+  bypassPermission: 'combatlog.leave'
+  # Установите false, если хотите убить игрока при выбрасывании его с сервера во время боя
+  kickExempt: true
+  # Установите false, если хотите фиксировать бой между игроком и мобом
+  mobsExempt: false
+  # Установите false, если хотите фиксировать бой между игроками
+  playersExempt: false
+  Blocking:
+    # Миры, в которых мобы будут давать бой игроку (даже если стоит mobsExempt: true)
+    mobsAllowedCombatOverrideWorlds:
+    - 'dungeonworld'
+    # Добавьте в этот список мир, в котором не должен работать этот плагин
+    disabledWorlds: []
+    # Список разрешённых команд во время боя
+    allowedCommands:
+    - '/ct'
+    - '/heal'
+    - '/h'
+    - '/food'
+    # Установите true, если хотите запретить телепортацию во время боя
+    disableTeleports: true
+    # Если disableTeleports = true, то проверяется дистанция телепорта.
+    maxTeleportDistance: 10
+  
+Messages:
+  defaultDamager: 'сущностью'
+  combatCheck: '&8[&cCombat&8] &7До конца боя осталось &8{seconds}&7 сек.'
+  combatExpired: '&8[&cCombat&8] &7Вы вышли из режима боя.'
+  combatNotExists: '&8[&cCombat&8] &7Вы не в бою.'
+  combatClaimed: '&8[&cCombat&8] &7Вы вошли в бой с &8{living}&7. Не выходите из игры в течение следующих &8{duration}&7 сек.'
+  cmdBlocked: '&8[&cCombat&8] &7Вы не можете писать эту команду, пока вы в бою.'

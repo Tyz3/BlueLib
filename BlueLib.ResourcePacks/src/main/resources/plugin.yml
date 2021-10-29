@@ -1,0 +1,19 @@
+name: BlueLib.ResourcePacks
+main: ru.kronos.resourcepacks.Main
+version: 1.0
+api-version: 1.13
+website: https://vk.com/id55511198
+depend: [BlueLib]
+commands:
+  update-resourcepack:
+    description: Установка/Обновление серверного ресурс-пака.
+    permission: resourcepack.update
+    permission-message: У вас нет нужных прав <permission>.
+    usage: Используйте /<command> (хэш_сумма_архива) (прямая_ссылка)
+    aliases: [update-rp]
+  remove-resourcepack:
+    description: Удаление серверного ресурс-пака.
+    permission: resourcepack.remove
+    permission-message: У вас нет нужных прав <permission>.
+    usage: Используйте /<command>
+    aliases: [remove-rp]
